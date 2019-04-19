@@ -5,6 +5,12 @@ export default {
   text: {
     template: formatTemplate(templates.text),
   },
+  textWithLabelBlock: {
+    template: formatTemplate(templates.textWithLabelBlock),
+  },
+  textWithDescriptionBlock: {
+    template: formatTemplate(templates.textWithDescriptionBlock),
+  },
   textarea: {
     template: formatTemplate(templates.textarea),
   },
