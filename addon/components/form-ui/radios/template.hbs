@@ -8,7 +8,7 @@
   )}}
 {{/if}}
 
-{{#if (and radios model)}}
+{{#if (and radios (not (is-empty model)))}}
   <ul aria-describedby={{concat elementId '-described-by'}}>
     {{#each radios as |radio idx|}}
       {{form-ui/radios/radio value=radio.value label=radio.label model=model idx=idx}}

@@ -1,0 +1,41 @@
+@mixin form-ui-toggle () {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  [id*='-described-by'] {
+    flex-basis: 100%;
+  }
+  label {
+    flex-grow: 1;
+  }
+
+  input {
+    border-radius: 11px !important;
+    border: solid 2px $calcite-gray-light;
+    cursor: pointer;
+    height: 22px;
+    width: 36px;
+    -webkit-appearance: none;
+    -webkit-transition: .25s;
+    &:checked {
+      padding-left: 14px;
+      padding-right: 0;
+      border-color: $calcite-green-dark;
+    }
+    &:after {
+      background-color: $calcite-gray-lighter;
+      border-radius: 8px;
+      content: '';
+      display: block;
+      height: 16px;
+      width: 16px;
+      position: relative;
+      top: 1px;
+      left: 1px;
+    }
+    &:checked:after {
+      background-color:  $calcite-green-dark;
+    }
+  }
+}

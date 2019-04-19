@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/ember';
-import FormStories from './form-ui';
+import FormStories from './forms';
 
 const forms = storiesOf('Forms', module);
 
