@@ -3,6 +3,7 @@ import hbs from 'htmlbars-inline-precompile';
 import { storiesOf } from '@storybook/ember';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
+// import CustomButton from '../components/custom-button';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   template: hbs`
@@ -15,6 +16,20 @@ storiesOf('Welcome', module).add('to Storybook', () => ({
     onClick: linkTo('Button'),
   },
 }));
+
+storiesOf('Custom Button', module)
+  .add('heyo', () => {
+    return {
+      template: hbs`{{custom-button}}`,
+      context: {}
+    }
+  })
+  // .add('heyo', () => ({
+  //   template: hbs`{{custom-button}}`,
+  //   context: {
+  //
+  //   }
+  // }));
 
 storiesOf('Button', module)
   .add('with text', () => ({
