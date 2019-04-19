@@ -1,0 +1,16 @@
+<label for={{concat elementId '-ui'}}>
+  <input type="radio"
+    id={{concat elementId '-ui'}}
+    value={{value}}
+    tabindex={{tabindex}}
+    checked={{eq model value}}
+    aria-checked="{{eq model value}}"
+    onchange={{action 'updateRadio' value}}>
+  {{#if label}}
+    {{label}}
+  {{else if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{value}}
+  {{/if}}
+</label>

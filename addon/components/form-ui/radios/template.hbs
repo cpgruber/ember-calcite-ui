@@ -1,0 +1,31 @@
+{{#if label}}
+  <label id={{componentId}}>{{label}}</label>
+{{else if (has-block)}}
+  {{yield (hash
+    label=(component 'form-ui/arbitrary')
+    id=componentId
+    labelledBy=(concat elementId '-labelled-by')
+  )}}
+{{/if}}
+
+{{#if (and radios model)}}
+  <ul aria-describedby={{concat elementId '-described-by'}}>
+    {{#each radios as |radio idx|}}
+      {{form-ui/radios/radio value=radio.value label=radio.label model=model idx=idx}}
+    {{/each}}
+  </ul>
+{{else if (has-block)}}
+  {{yield (hash
+    radios=(component 'form-ui/arbitrary')
+    describedBy=(concat elementId '-described-by')
+  )}}
+{{/if}}
+
+{{#if description}}
+  <div id={{concat elementId '-described-by'}}>{{description}}</div>
+{{else if (has-block)}}
+  {{yield (hash
+    after=(component 'form-ui/arbitrary')
+    describedBy=(concat elementId '-described-by')
+  )}}
+{{/if}}

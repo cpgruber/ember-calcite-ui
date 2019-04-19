@@ -1,13 +1,9 @@
-/* eslint-disable import/extensions */
-import hbs from 'htmlbars-inline-precompile';
 import { storiesOf } from '@storybook/ember';
-// import { action } from '@storybook/addon-actions';
-// import { linkTo } from '@storybook/addon-links';
+import FormStories from './form-ui';
 
-storiesOf('Forms', module)
-  .add('heyo', () => {
-    return {
-      template: hbs`{{custom-button}}`,
-      context: {}
-    }
-  })
+const forms = storiesOf('Forms', module);
+
+Object.entries(FormStories).forEach(story => {
+  let [name, template] = story;
+  forms.add(name, () => template);
+});

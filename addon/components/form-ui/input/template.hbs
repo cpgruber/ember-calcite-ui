@@ -1,0 +1,35 @@
+{{#if label}}
+  <label for={{concat elementId '-ui'}}>{{label}}</label>
+{{else if (has-block)}}
+  {{yield (hash
+    label=(component 'form-ui/arbitrary')
+    id=(concat elementId '-ui')
+  )}}
+{{/if}}
+
+{{#if (eq type 'textarea')}}
+  {{textarea
+    id=(concat elementId '-ui')
+    class='form-control'
+    value=value
+    rows=rows
+    cols=cols
+    aria-describedby=(concat elementId '-described-by')}}
+{{else}}
+  {{input type=type
+    id=(concat elementId '-ui')
+    class='form-control'
+    value=value
+    min=(if (eq type 'number') min)
+    max=(if (eq type 'number') max)
+    aria-describedby=(concat elementId '-described-by')}}
+{{/if}}
+
+{{#if description}}
+  <div id={{concat elementId '-described-by'}}>{{description}}</div>
+{{else if (has-block)}}
+  {{yield (hash
+    after=(component 'form-ui/arbitrary')
+    describedBy=(concat elementId '-described-by')
+  )}}
+{{/if}}

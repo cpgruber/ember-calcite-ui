@@ -1,0 +1,27 @@
+{{#if label}}
+  <label for={{concat elementId '-ui'}}>{{label}}</label>
+{{else if (has-block)}}
+  {{yield (hash
+    label=(component 'form-ui/arbitrary')
+    id=(concat elementId '-ui')
+    describedBy=(concat elementId '-described-by')
+    labelledBy=(concat elementId '-labelled-by')
+  )}}
+{{/if}}
+
+{{input type="checkbox"
+  id=(concat elementId '-ui')
+  checked=checked
+  disabled=disabled
+  aria-labelledby=(concat elementId '-labelled-by')
+  aria-describedby=(concat elementId '-described-by')}}
+
+{{#if description}}
+  <div id={{concat elementId '-described-by'}}>{{description}}</div>
+{{else if (has-block)}}
+  {{yield (hash
+    after=(component 'form-ui/arbitrary')
+    describedBy=(concat elementId '-described-by')
+    labelledBy=(concat elementId '-labelled-by')
+  )}}
+{{/if}}
