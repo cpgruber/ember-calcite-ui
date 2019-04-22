@@ -1,14 +1,22 @@
 @import 'form-ui/toggle';
+@import 'form-ui/radios';
 
 [class^='form-group form-ui-'] {
   margin: 0;
-  padding: 10px;
 
   label, input, div {
     margin: 0;
   }
 
+  [id*='-described-by'] {
+    margin-top: 10px;
+  }
+
   &.form-ui-toggle {
     @include form-ui-toggle;
+  }
+
+  &.form-ui-radios {
+    @include form-ui-radios;
   }
 }
