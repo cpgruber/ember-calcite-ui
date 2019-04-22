@@ -1,7 +1,7 @@
 ember-calcite-ui
 ==============================================================================
 
-[Short description of the addon.]
+Ember component library for [calcite-bootstrap](https://github.com/Esri/calcite-bootstrap)
 
 Installation
 ------------------------------------------------------------------------------
