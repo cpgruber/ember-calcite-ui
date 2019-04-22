@@ -47,24 +47,37 @@ const radios = {
   name: 'Radio',
   template: `{{form-ui/radios
   model=model
-  radios=radios
+  items=items
   label='label'
   description='description'}}`,
   context: {
-    model: 0,
-    radios: [{label: 'radio 0', value: 0}, {label: 'radio 1', value: 1}, {label: 'radio 2', value: 2}]
+    model: 1,
+    items: [{label: 'radio 1', value: 1}, {label: 'radio 2', value: 2}, {label: 'radio 3', value: 3}]
   }
 };
 
 const toggle = {
   name: 'Toggle',
   template: `{{form-ui/toggle
-    checked=model
-    label='label'
-    description='description'}}`,
+  checked=model
+  label='label'
+  description='description'}}`,
   context: {
     model: true
   }
 };
 
-export default {text, textWithLabelBlock, textWithDescriptionBlock, textarea, number, radios, toggle};
+const checkboxes = {
+  name: 'Checkboxes',
+  template: `{{form-ui/checkboxes
+  model=model
+  items=items
+  label='label'
+  description='description'}}`,
+  context: {
+    model: [1],
+    items: [{label: 'checkbox 1', value: 1}, {label: 'checkbox 2', value: 2}, {label: 'checkbox 3', value: 3}]
+  }
+}
+
+export default {text, textWithLabelBlock, textWithDescriptionBlock, textarea, number, radios, toggle, checkboxes};

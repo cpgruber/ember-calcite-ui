@@ -1,0 +1,14 @@
+<label for={{concat elementId '-ui'}}>
+  {{input type="checkbox"
+    id=(concat elementId '-ui')
+    checked=checked
+    aria-checked=checked
+    change=(action 'onChange')}}
+  {{#if label}}
+    {{label}}
+  {{else if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{value}}
+  {{/if}}
+</label>

@@ -6,6 +6,6 @@ export function initialize () {
     attributeBindings: ['aria-label', 'aria-describedby', 'aria-labelledby']
   });
   Checkbox.reopen({
-    attributeBindings: ['aria-label', 'aria-describedby', 'aria-labelledby']
+    attributeBindings: ['aria-label', 'aria-describedby', 'aria-labelledby', 'aria-checked']
   });
 }

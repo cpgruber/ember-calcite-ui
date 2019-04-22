@@ -5,7 +5,7 @@
     tabindex={{tabindex}}
     checked={{eq model value}}
     aria-checked="{{eq model value}}"
-    onchange={{action 'updateRadio' value}}>
+    onchange={{action (mut model) value}}>
   {{#if label}}
     {{label}}
   {{else if (has-block)}}

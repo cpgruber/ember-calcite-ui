@@ -1,5 +1,6 @@
 @import 'form-ui/toggle';
 @import 'form-ui/radios';
+@import 'form-ui/checkboxes';
 
 [class^='form-group form-ui-'] {
   margin: 0;
@@ -18,5 +19,9 @@
 
   &.form-ui-radios {
     @include form-ui-radios;
+  }
+
+  &.form-ui-checkboxes {
+    @include form-ui-checkboxes;
   }
 }

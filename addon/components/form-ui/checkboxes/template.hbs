@@ -8,10 +8,10 @@
   )}}
 {{/if}}
 
-{{#if (and items (not (is-empty model)))}}
+{{#if (and items (is-array model))}}
   <ul aria-describedby={{concat elementId '-described-by'}}>
-    {{#each items as |item idx|}}
-      {{form-ui/radios/radio value=item.value label=item.label model=model idx=idx}}
+    {{#each items as |item|}}
+      {{form-ui/checkboxes/checkbox value=item.value label=item.label model=model}}
     {{/each}}
   </ul>
 {{else if (has-block)}}

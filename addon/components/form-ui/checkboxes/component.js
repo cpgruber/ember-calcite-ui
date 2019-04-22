@@ -3,9 +3,8 @@ import layout from './template';
 
 export default Component.extend({
   layout,
-  classNames: ['form-group', 'form-ui-radios'],
-  attributeBindings: ['componentId:aria-labelledby', 'role'],
-  role: 'radiogroup',
+  classNames: ['form-group', 'form-ui-checkboxes'],
+  attributeBindings: ['componentId:aria-labelledby'],
 
   init () {
     this._super(...arguments);

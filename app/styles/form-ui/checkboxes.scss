@@ -1,5 +1,5 @@
 @import '_lists';
 
-@mixin form-ui-radios () {
+@mixin form-ui-checkboxes () {
   @include normalize_list
 }

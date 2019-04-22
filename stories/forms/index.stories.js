@@ -8,5 +8,5 @@ const catalog = storiesOf(catalogName, module);
 
 Object.values(templates).forEach(story => {
   let { name, template, context } = story;
-  catalog.add(name, () => formatTemplate(name, template, context));
+  catalog.add(name, () => formatTemplate(catalogName, name, template, context));
 });

@@ -14,11 +14,5 @@ export default Component.extend({
     } else if (idx) {
       return '-1';
     }
-  }),
-
-  actions: {
-    updateRadio (value) {
-      this.set('model', value);
-    }
-  }
+  })
 });
