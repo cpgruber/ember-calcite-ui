@@ -3,9 +3,21 @@ ember-calcite-ui
 
 Ember component library for [calcite-bootstrap](https://github.com/Esri/calcite-bootstrap)
 
+### Running storybook
+- clone && cd
+- `npm install`
+- run `ember s` in one terminal, `npm run storybook` in another
+ - storybook browser url should open automagically
+
+> Note: `npm run storybook` expects that an ember server is running
+
+
+## Ignore everything below for now
+
 Installation
 ------------------------------------------------------------------------------
 
+> Not yet...
 ```
 ember install ember-calcite-ui
 ```
