@@ -2,9 +2,9 @@ import { compile } from 'ember-source/dist/ember-template-compiler';
 import toString from './templateToString';
 
 export default (catalog, name, tmp, context) => {
-  let stringified = toString(tmp);
+  const stringified = toString(tmp);
 
-  let template = compile(`
+  const template = compile(`
   <div class='container'>
     <div class='row'>
       <div class='col-md-6 col-md-offset-3 display-container'>
