@@ -33,7 +33,7 @@
     "@storybook/addon-actions": "^5.0.10",
     "@storybook/addon-links": "^5.0.10",
     "@storybook/addons": "^5.0.10",
-    "@storybook/ember": "^5.0.10",
+    "@storybook/ember": "^6.5.13",
     "babel-loader": "^8.0.5",
     "broccoli-asset-rev": "^2.7.0",
     "calcite-bootstrap": "^0.4.4",
